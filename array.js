@@ -5,8 +5,12 @@
  */
 
 function printAll(a) {
-  // finish the code
+  for (var x = 0; x < a.length; x++) {
+    console.log(a[x]);
+  }
 }
+var collection = [1, 2, 3];
+printAll(collection);
 
 /**
  *
@@ -16,9 +20,12 @@ function printAll(a) {
  */
 
 function findInArray(a, b) {
-  // finish the code
+  for (var x = 0; x < a.length; x++) {
+    if (a[x] === b) return x;
+  }
 }
-
+var shelf = ["LODR", "Bible", "Flat Stanley", "Quran"];
+console.log(findInArray(shelf, "Quran"));
 /**
  *
  * @param {Array} a - array of Numbers
@@ -27,9 +34,13 @@ function findInArray(a, b) {
  */
 
 function addToArray(a, b) {
-  // finish the code
+  for (var x = 0; x < a.length; x++) {
+    a[x] = a[x] + b;
+  }
+  return a;
 }
-
+var cabinet = [2, 4, 5, 2, 1, 6];
+console.log(addToArray(cabinet, 7));
 /**
  *
  * @param {Array} a - array of Numbers
@@ -38,8 +49,17 @@ function addToArray(a, b) {
  */
 
 function doToArray(a, b) {
-  // finish the code
+  for (var x = 0; x < a.length; x++) {
+    a[x] = b(a[x]);
+  }
+  return a;
 }
+var vacuum = [1, 2, 3, 4, 5, 6, 7];
+
+function square(number) {
+  return number ** 2;
+}
+console.log(doToArray(vacuum, square));
 
 /**
  *
@@ -49,9 +69,9 @@ function doToArray(a, b) {
  */
 
 function sortArray(a, b) {
-  // finish the code
+  for (var x = 0; x < a.length; x++) {}
 }
-
+var line = (4, 3, 6, 1, 7, 2);
 module.exports = {
   printAll,
   findInArray,
